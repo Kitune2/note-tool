@@ -28,9 +28,8 @@ class note:
               "_note_session_v5":session_id,
               "XSRF-TOKEN":XSRFtoken
         }
-        print(self.header)
         r = session.post(f"https://note.com/api/v3/notes/{article_id}/likes",headers=header,cookies=cookie)
-        print(r.text)
+        return r
 
 
     def follow(self, session_id, user_name):
@@ -53,4 +52,4 @@ class note:
               "XSRF-TOKEN":XSRFtoken
         }
         r = requests.post(f"https://note.com/api/v3/users/{user_id}/following",headers=header,cookies=cookie)
-        print(r)
+        return r
