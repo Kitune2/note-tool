@@ -1,7 +1,5 @@
 import requests
 session = requests.Session()
-from bs4 import BeautifulSoup
-from twocaptcha import TwoCaptcha
 class note:
     def __init__(self) :
 
